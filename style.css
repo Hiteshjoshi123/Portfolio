@@ -1,0 +1,471 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+:root {
+  --boxColor: rgb(168, 32, 161);
+  --rotateSpeed: 30s;
+  --bounceSpeed: 2s;
+}
+.left {
+  display: none;
+  color: aliceblue;
+  position: absolute;
+  top: 200px;
+  left: -100px;
+  font-size: 50px;
+  font-weight: 900;
+  margin: 10px;
+}
+.top {
+  display: none;
+  color: aliceblue;
+  position: absolute;
+  top: -250px;
+  left: 100px;
+  font-size: 50px;
+  font-weight: 900;
+  margin: 10px;
+}
+.right {
+  display: none;
+  color: aliceblue;
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  right: -100%;
+  font-size: 50px;
+  font-weight: 900;
+  margin: 10px;
+}
+
+.floating {
+  cursor: pointer;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+  text-shadow: 2px 2px 5px black;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.logo {
+  display: none;
+  position: absolute;
+  font-family: Sans-serif;
+  font-size: 600px;
+  font-weight: 600;
+  color: rgb(214, 10, 44);
+  left: 60%;
+  top: 10px;
+  transform: rotateZ(-20deg);
+  cursor: pointer;
+  /* animation-name: floating1;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+  animation: flicker1 1.5s infinite alternate;
+}
+
+@keyframes flicker1 {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px rgb(214, 10, 44),
+      0 0 82px rgb(214, 10, 44), 0 0 92px rgb(214, 10, 44), 0 0 102px rgb(214, 10, 44), 0 0 151px rgb(214, 10, 44);
+  }
+ /* 45%,46%,47%,48%,49%,50%,51%,52%,53%,55%{
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.404), 0 0 11px rgba(255, 255, 255, 0.404), 0 0 19px rgba(255, 255, 255, 0.404), 0 0 42px rgb(214, 10, 44, 0.404),
+    0 0 82px rgb(214, 10, 44, 0.404), 0 0 92px rgb(214, 10, 44, 0.404), 0 0 102px rgb(214, 10, 44, 0.404), 0 0 151px rgb(214, 10, 44, 0.404);
+  } */
+}
+.logo1 {
+  display: none;
+  position: absolute;
+  font-family: Sans-serif;
+  font-size: 600px;
+  font-weight: 600;
+  color: white;
+  left: 62%;
+  top: 0px;
+  transform: rotateZ(-20deg);
+  cursor: pointer;
+  animation: logo1 1.5s infinite alternate;
+}
+.bar {
+  width: 60px;
+  height: 100%;
+  position: fixed;
+  background-color: pink;
+  animation: bar 1.5s infinite alternate;
+}
+.bar .about {
+  position: absolute;
+  top: 200px;
+  left: 5px;
+  z-index: 1;
+}
+.bar .about:hover {
+  border-radius: 20px;
+  background-color: pink;
+  box-shadow: 5px 5px 20px rgba(255, 166, 0, 0.342);
+}
+
+.bar .project {
+  position: absolute;
+  top: 280px;
+  left: 5px;
+  z-index: 1;
+}
+.bar .contact {
+  position: absolute;
+  top: 360px;
+  left: 5px;
+  z-index: 1;
+}
+.bar .resume {
+  position: absolute;
+  top: 440px;
+  left: 5px;
+  z-index: 1;
+}
+
+.smalllogo {
+  position: absolute;
+  left: 5px;
+  font-family: Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 10px;
+  color: rgb(214, 10, 44);
+  transform: rotateZ(20deg);
+  cursor: pointer;
+  animation: smalllogo 1.5s infinite alternate;
+}
+@keyframes smalllogo {
+from {
+  transform: translate(100, 0px);
+}
+
+65% {
+  transform: translate(100, 15px);
+}
+
+to {
+  transform: translate(0, -0px);
+}
+}
+.smalllogo1 {
+  position: absolute;
+  top: 5px;
+  left:10px;
+  font-family: Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  transform: rotateZ(20deg);
+  cursor: pointer;
+  animation: smalllogo1 1.5s infinite alternate;
+}
+@keyframes smalllogo1 {
+from {
+  transform: translate(100, 0px);
+}
+
+65% {
+  transform: translate(100, 15px);
+}
+
+to {
+  transform: translate(0, -0px);
+}
+}
+.button{
+  cursor: pointer;
+  width:50px;
+  height: 50px;
+  border-radius: 25px;
+  border-style: none;
+  animation: button 1.5s infinite alternate;
+}
+.button:hover {
+  color: white;
+  background-color: orange;
+}
+.post{
+  display: none;
+  color:white;
+  position: absolute;
+  left:160px;
+  top:380px;
+}
+.subhead{
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 2px;
+  color: rgb(207, 12, 45);
+}
+.color1{
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 4.5%;
+  width:100%;
+  height:100%;
+  animation: color1 10s infinite linear;
+}
+@keyframes color1 {
+  0% {
+    background-color: rgb(255, 0, 0);
+  }
+  10% {
+    background-color: rgb(255, 255, 0);
+  }
+  20% {
+    background-color: rgb(0, 0, 255);
+  }
+  30% {
+    background-color: rgb(0, 128, 0);
+  }
+  40% {
+    background-color: rgb(0, 204, 255);
+  }
+  50% {
+    background-color: rgb(255, 255, 0);
+  }
+  60% {
+    background-color: rgb(0, 0, 255);
+  }
+  70% {
+    background-color: rgb(0, 128, 0);
+  }
+  80% {
+    background-color: rgba(255, 0, 0);
+  }
+  90% {
+    background-color: rgba(255, 255, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 255);
+  } 
+}
+
+.Resume{
+  cursor: pointer;
+  position:absolute;
+  color: white;
+  font-family: sans-serif;
+  background-color: black;
+  top:450px;
+  left:200px;
+  width:100px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid rebeccapurple;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px rgb(214, 10, 44),
+  0 0 82px rgb(214, 10, 44), 0 0 92px rgb(214, 10, 44), 0 0 102px rgb(214, 10, 44), 0 0 151px rgb(214, 10, 44);
+  box-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px rebeccapurple,
+  0 0 82px rebeccapurple, 0 0 92px rebeccapurple, 0 0 102px rebeccapurple, 0 0 151px rebeccapurple;
+
+  animation: floating 3s infinite linear;
+}
+
+.Contact{
+  cursor: pointer;
+  position:absolute;
+  color: white;
+  font-family: sans-serif;
+  background-color: black;
+  top:450px;
+  left:320px;
+  width:100px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid rebeccapurple;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px rgb(214, 10, 44),
+  0 0 82px rgb(214, 10, 44), 0 0 92px rgb(214, 10, 44), 0 0 102px rgb(214, 10, 44), 0 0 151px rgb(214, 10, 44);
+  box-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px rebeccapurple,
+  0 0 82px rebeccapurple, 0 0 92px rebeccapurple, 0 0 102px rebeccapurple, 0 0 151px rebeccapurple;
+  animation: floating 3s infinite linear;
+} 
+
+
+ .logoAni {
+  position: absolute;
+  top:00px;
+  left: 90px;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 10px;
+  color: rgb(214, 10, 44);
+  transform: rotateZ(20deg);
+  cursor: pointer;
+  animation: logoAni 1s infinite alternate;
+}
+@keyframes logoAni {
+from {
+  transform: translate(100, 0px);
+}
+
+65% {
+  transform: translate(100, 15px);
+}
+
+to {
+  transform: translate(0, -0px);
+}
+}
+.logoAni1 {
+  position: absolute;
+  top: 5px;
+  left:95px;
+  font-family: Sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  transform: rotateZ(20deg);
+  cursor: pointer;
+  animation: logoAni1 1s infinite alternate;
+}
+@keyframes logoAni1 {
+  from {
+    transform: translate(100, 0px);
+  }
+  
+  65% {
+    transform: translate(100, 20px);
+  }
+  
+  to {
+    transform: translate(0, -0px);
+  } 
+   }
+  .floor {
+    position: absolute;
+    top: 1em;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    width: 15em;
+    height: 15em;
+    background-image: radial-gradient(#0000, #000 75%),
+      repeating-conic-gradient(
+        from 45deg,
+        rgb(216, 33, 125) 0deg 90deg,
+        #222 90deg 180deg
+      );
+    background-size: 100%, 1em 1em;
+  }
+  
+  .floor1 {
+    background-color: #000;
+    min-height: 100vh;
+    position: absolute;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    font-size: 50px;
+    perspective: 10em;
+    perspective-origin: 50% calc(40% - 5em);
+    z-index: -1;
+  }
+  .scene {
+    position: relative;
+    left: 100px;
+    transform-style: preserve-3d;
+    animation: sceneRotate var(--rotateSpeed) infinite linear;
+  }
+  @keyframes sceneRotate {
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .cube {
+    width: 2em;
+    height: 2em;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: -1em;
+    top: -1em;
+    left: -1em;
+    z-index: -1;
+  }
+  
+
+.frontface,
+.leftface,
+.rightface,
+.topface,
+.bottomface,
+.backface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--boxColor);
+  box-shadow: 0 0 0.5em #000a inset;
+}
+.frontface {
+  transform: translateZ(1em);
+}
+.rightface {
+  transform: rotateY(90deg) translateZ(1em);
+}
+.backface {
+  transform: rotateY(180deg) translateZ(1em);
+}
+.leftface {
+  transform: rotateY(270deg) translateZ(1em);
+}
+.topface {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: var(--boxColor);
+  transform: translate(0%, -50%) rotateX(90deg);
+}
+.bottomface {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: var(--boxColor);
+  bottom: 0;
+  transform: translate(50px, 0%) rotateY(90deg);
+}
+a{
+  text-decoration: none;
+}
+/* @media only screen and (min-width: 360px) {
+  .floor {
+    background-color: lightblue;
+  }
+} */

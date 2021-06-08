@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --boxColor: #0ff7;
+  --rotateSpeed: 30s;
+  --bounceSpeed: 2s;
+}
+body {
+  background-color: #fff;
+}
+.bar {
+  width: 60px;
+  height: 100%;
+  position: fixed;
+  background-color: pink;
+  animation: bar 1.5s infinite alternate;
+}
+.bar .about {
+  position: absolute;
+  top: 200px;
+  left: 5px;
+  z-index: 1;
+}
+.bar .about:hover {
+  border-radius: 20px;
+  background-color: pink;
+  box-shadow: 5px 5px 20px rgba(255, 166, 0, 0.342);
+}
+
+.bar .project {
+  position: absolute;
+  top: 280px;
+  left: 5px;
+  z-index: 1;
+}
+.bar .contact {
+  position: absolute;
+  top: 360px;
+  left: 5px;
+  z-index: 1;
+}
+.bar .resume {
+  position: absolute;
+  top: 440px;
+  left: 5px;
+  z-index: 1;
+}
+
+.smalllogo {
+  position: absolute;
+  left: 5px;
+  font-family: Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 10px;
+  color: rgb(214, 10, 44);
+  transform: rotateZ(20deg);
+  cursor: pointer;
+  animation: smalllogo 1.5s infinite alternate;
+}
+@keyframes smalllogo {
+  from {
+    transform: translate(100, 0px);
+  }
+
+  65% {
+    transform: translate(100, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+.smalllogo1 {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-family: Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  transform: rotateZ(20deg);
+  cursor: pointer;
+  animation: smalllogo1 1.5s infinite alternate;
+}
+@keyframes smalllogo1 {
+  from {
+    transform: translate(100, 0px);
+  }
+
+  65% {
+    transform: translate(100, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+.button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border-style: none;
+}
+.about1 {
+  background-color: black;
+  color: #fff;
+}
+.button:hover {
+  animation: button 1.5s infinite alternate;
+}
+
+@keyframes button {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    background-color: orange;
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px orange,
+      0 0 82px orange, 0 0 92px orange, 0 0 102px orange, 0 0 151px orange;
+  }
+}
+.post {
+  display: none;
+  color: white;
+  position: absolute;
+  left: 160px;
+  top: 380px;
+}
+.subhead {
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 2px;
+  color: rgb(207, 12, 45);
+}
+.color1 {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 4.5%;
+  width: 100%;
+  height: 100%;
+  animation: color1 10s infinite linear;
+}
+@keyframes color1 {
+  0% {
+    background-color: rgb(255, 0, 0);
+  }
+  10% {
+    background-color: rgb(255, 255, 0);
+  }
+  20% {
+    background-color: rgb(0, 0, 255);
+  }
+  30% {
+    background-color: rgb(0, 128, 0);
+  }
+  40% {
+    background-color: rgb(0, 204, 255);
+  }
+  50% {
+    background-color: rgb(255, 255, 0);
+  }
+  60% {
+    background-color: rgb(0, 0, 255);
+  }
+  70% {
+    background-color: rgb(0, 128, 0);
+  }
+  80% {
+    background-color: rgba(255, 0, 0);
+  }
+  90% {
+    background-color: rgba(255, 255, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 255);
+  }
+}
+.loading {
+  position: absolute;
+  color: whitesmoke;
+  font-size: 50px;
+  font-weight: 900;
+  top: 50%;
+  left: 40%;
+}
+.floor {
+  position: absolute;
+  top: 1em;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  width: 15em;
+  height: 15em;
+  background-image: radial-gradient(#0000, #000 75%),
+    repeating-conic-gradient(
+      from 45deg,
+      rgb(143, 33, 216) 0deg 90deg,
+      rgb(7, 2, 2) 90deg 180deg
+    );
+  background-size: 100%, 1em 1em;
+}
+
+.floor1 {
+  background-color: #000;
+  min-height: 100vh;
+  position: absolute;
+  left: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-content: center;
+  align-items: center;
+  font-size: 50px;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 3em);
+  z-index: -1;
+}
+.scene {
+  position: relative;
+  left: 100px;
+  transform-style: preserve-3d;
+  animation: sceneRotate var(--rotateSpeed) infinite linear;
+}
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.ball {
+  width: 1em;
+  height: 1em;
+  color: aliceblue;
+  border-radius: 50%;
+  position: absolute;
+  left: -2em;
+  bottom: -5em;
+  background-image: radial-gradient(circle at top lightblue, #000, 75%);
+  animation: ballBounce var(--bounceSpeed) infinite ease-out,
+    sceneRotate var(--rotateSpeed) infinite linear reverse;
+  }
+@keyframes ballBounce {
+  0%,
+  100% {
+    bottom: 0.5em;
+  }
+  50% {
+    bottom: 3em;
+    animation-timing-function: ease-in;
+  }
+}
+
+.cube {
+  width: 2em;
+  height: 2em;
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: -1em;
+  top: -1em;
+  left: -0.5em;
+  animation: cubeHeight var(--bounceSpeed) infinite ease-out;
+}
+.projectpage {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  color: aqua;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: sans-serif;
+  z-index: -1;
+}
+.projectpage1 {
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  line-height: 30px;
+  color: aliceblue;
+  font-size: 20px;
+  z-index: -1;
+}
+.video {
+  width: 300px;
+  height: 300px;
+}
+.bottomface {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  bottom: 0;
+  transform: translate(-200px, -200%) translateZ(250px) translateX(200px) rotateZ(180deg)
+    rotateX(180deg) rotateY(-150deg);
+}
+.skills6 {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  transform: translate(-400px, -100%) translateZ(-0px) translateX(50px) rotateZ(180deg)
+    rotateX(180deg) rotateY(-250deg);
+}
+.skills7 {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  transform: translate(300px, -150%) translateZ(-200px) translateX(-150px) rotateZ(180deg)
+    rotateX(180deg) rotateY(-380deg);
+}
+.img1{
+  width: 200px;
+  height: 200px;
+}
+.img2{
+  width: 250px;
+  height: 250px;
+}
+a{
+  text-decoration: none;
+}
