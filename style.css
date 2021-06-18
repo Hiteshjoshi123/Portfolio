@@ -91,7 +91,7 @@ body {
   width: 60px;
   height: 100%;
   position: fixed;
-  background-color: pink;
+  background-color: black;
   animation: bar 1.5s infinite alternate;
   text-align: center;
   overflow: hidden;
@@ -134,15 +134,46 @@ body {
   color: white;
   background-color: orange;
 }
+a{
+  text-decoration: none;
+}
+i::before{
+  font-size: 25px;
+  color: #000;
+}
 
-.subhead {
+.subhead1{
   cursor: pointer;
   font-size: 10px;
   font-weight: 900;
   margin-left: 2px;
+  text-decoration: none;
   color: rgb(207, 12, 45);
 }
-
+.subhead2{
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 2px;
+  text-decoration: none;
+  color: rgb(207, 12, 45);
+}
+.subhead3{
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 2px;
+  text-decoration: none;
+  color: rgb(207, 12, 45);
+}
+.subhead4{
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 2px;
+  text-decoration: none;
+  color: rgb(207, 12, 45);
+}
 .smalllogo {
   position: absolute;
   left: 5px;
@@ -409,6 +440,10 @@ body {
   transform: translate(50px, 0%) rotateY(90deg);
 }
 @media only screen and (min-width: 350px) and (max-width: 700px) {
+i::before{
+  font-size: 15px;
+  color: #000;
+}
   .floor1 {
     min-width: 10vh;
     perspective: 40em;
